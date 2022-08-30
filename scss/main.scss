@@ -1,3 +1,134 @@
-*{
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom left, #C7AE96, #726356);
+    font-family: 'Poppins', sans-serif;
+}
+
+.productCard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 670px;
+    height: 360px;
+    max-width: 100%;
+    border: 6px solid #fff;
+    border-radius: 20px;
+    background: whitesmoke;
+    box-shadow: 10px 30px 50px -20px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+
+    .left {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        /* float: left; */
+        background: linear-gradient(#CCB29A 50%, azure 50%);
+        height: 450px;
+        width: 320px;
+        box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+        margin-top: -50px;
+        border-radius: 12px;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    .right {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        /* float: right; */
+        padding: 2rem 1rem;
+        box-sizing: border-box;
+
+        .nombreProducto {
+            font-weight: bold;
+            font-size: 1rem;
+            line-height: 1rem;
+        }
+
+        .precioProducto {
+            padding: 1rem 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .descProducto p {
+            font-size: 0.9rem;
+            text-align: justify;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+        }
+
+        .color {
+            margin: 1rem 0;
+
+            &:after {
+                content: '';
+                display: block;
+                clear: left;
+            }
+
+            ul li {
+                width: 20px;
+                height: 20px;
+                border: 2px solid #aaa;
+                list-style: none;
+                border-radius: 4px;
+                float: right;
+                left: -20px;
+                margin-right: 0.4rem;
+                cursor: pointer;
+                transition: all 0.4s ease;
+
+                &:nth-child(1) {
+                    background: #CCB29A;
+                    margin-right: 40px;
+
+                    &:hover {
+                        border-color: #CCB29A;
+                    }
+                }
+
+                &:nth-child(2) {
+                    background: azure;
+
+                    &:hover {
+                        border-color: azure;
+                    }
+                }
+            }
+        }
+
+        button {
+            width: 70%;
+            height: 40px;
+            margin-top: 50px;
+            border-radius: 20px;
+            border: none;
+            background: linear-gradient(to bottom left, #726356, #C7AE96);
+            color: #fff;
+            cursor: pointer;
+        }
+
+
+    }
+}
+
+@import 'mediaqueries.scss';

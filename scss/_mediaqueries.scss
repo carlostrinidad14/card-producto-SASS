@@ -1,0 +1,21 @@
+@media (max-width: 767px) {
+    .productCard {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+
+        .left {
+            width: 100%;
+            border-radius: 12px;
+            margin-top: 0px;
+            height: 300px;
+        }
+
+        .right {
+            width: 100%;
+        }
+    }
+
+
+
+}
